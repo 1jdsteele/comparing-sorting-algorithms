@@ -1,0 +1,11 @@
+# Java class files
+*.class
+
+# Compiled source folders
+/bin/
+/out/
+
+# IDE-specific
+.vscode/
+.idea/
+*.iml
