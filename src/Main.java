@@ -30,6 +30,17 @@ public class Main {
         printArray(smallArrayNS, 20);
 
 
+        //Jonathan's test to upload
+        // System.out.println("Jonathan's test");
+        // int[] jonathanArray = arrays.getSmallArray();
+        // printArray(jonathanArray, 20);
+
+        //MJ's test to upload
+        // System.out.println("MJ's test");
+        // int[] mjArray = arrays.getSmallArray();
+        // printArray(mjArray, 20);
+
+
 
 
     }
