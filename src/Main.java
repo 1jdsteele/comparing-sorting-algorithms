@@ -139,12 +139,50 @@ public class Main {
 
 
         //MJ's test to upload
-        // System.out.println("MJ's test");
-        // int[] mjArray = arrays.getSmallArray();
-        // printArray(mjArray, 20);
+        System.out.println("\nMJ's shell sort test");
+        long shellSortStartTime, shellSortEndTime, shellSortDuration;
 
+        int[] mjSmallArray = arrays.getSmallArray();
+        shellSortStartTime = System.nanoTime();
+        ShellSort.sort(mjSmallArray, mjSmallArray.length);
+        shellSortEndTime = System.nanoTime();
+        shellSortDuration = shellSortEndTime - shellSortStartTime;
+        System.out.println("Shell Sort Small Array Execution time: " + shellSortDuration / 1_000_000.0 + " ms");
 
+        int[] mjMediumArray = arrays.getMediumArray();
+        shellSortStartTime = System.nanoTime();
+        ShellSort.sort(mjMediumArray, mjMediumArray.length);
+        shellSortEndTime = System.nanoTime();
+        shellSortDuration = shellSortEndTime - shellSortStartTime;
+        System.out.println("Shell Sort Medium Array Execution time: " + shellSortDuration / 1_000_000.0 + " ms");
 
+        int[] mjLargeArray = arrays.getLargeArray();
+        shellSortStartTime = System.nanoTime();
+        ShellSort.sort(mjLargeArray, mjLargeArray.length);
+        shellSortEndTime = System.nanoTime();
+        shellSortDuration = shellSortEndTime - shellSortStartTime;
+        System.out.println("Shell Sort Large Array Execution time: " + shellSortDuration / 1_000_000.0 + " ms");
+
+        int[] mjSmallArrayNS = arrays.getSmallNearlySorted();
+        shellSortStartTime = System.nanoTime();
+        ShellSort.sort(mjSmallArrayNS, mjSmallArrayNS.length);
+        shellSortEndTime = System.nanoTime();
+        shellSortDuration = shellSortEndTime - shellSortStartTime;
+        System.out.println("Shell Sort Small Nearly Sorted Array Execution time: " + shellSortDuration / 1_000_000.0 + " ms");
+
+        int[] mjMediumArrayNS = arrays.getMediumNearlySorted();
+        shellSortStartTime = System.nanoTime();
+        ShellSort.sort(mjMediumArrayNS, mjMediumArrayNS.length);
+        shellSortEndTime = System.nanoTime();
+        shellSortDuration = shellSortEndTime - shellSortStartTime;
+        System.out.println("Shell Sort Medium Nearly Sorted Array Execution time: " + shellSortDuration / 1_000_000.0 + " ms");
+
+        int[] mjLargeArrayNS = arrays.getLargeNearlySorted();
+        shellSortStartTime = System.nanoTime();
+        ShellSort.sort(mjLargeArrayNS, mjLargeArrayNS.length);
+        shellSortEndTime = System.nanoTime();
+        shellSortDuration = shellSortEndTime - shellSortStartTime;
+        System.out.println("Shell Sort Large Nearly Sorted Array Execution time: " + shellSortDuration / 1_000_000.0 + " ms");
 
     }
 
