@@ -73,7 +73,7 @@ public class Main {
         QuickSort.runSort(jonathanArray,0, 19);
         quickSortendTime = System.nanoTime();
         quickSortDuration = quickSortendTime - quickSortstartTime ;
-        System.out.println("Quicksort Large Array Execution time: " + quickSortDuration / 1_000_000.0 + " ms");
+        System.out.println("Quicksort Large Array Near Sorted Execution time: " + quickSortDuration / 1_000_000.0 + " ms");
 
 
 
