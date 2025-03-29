@@ -14,7 +14,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println("Hello cruel world!");
 
 
         ArrayGenerator arrays = new ArrayGenerator();
@@ -23,11 +22,11 @@ public class Main {
         int[] mediumArray = arrays.getMediumArray();
         int[] largeArray = arrays.getLargeArray();
 
-        printArray(smallArray, 20);
 
         int[] smallArrayNS = arrays.getSmallNearlySorted();
+        int[] mediumArrayNS = arrays.getMediumNearlySorted();
+        int[] largeArrayNS = arrays.getLargeNearlySorted();
 
-        printArray(smallArrayNS, 20);
 
 
 //        Jonathan's test to upload
@@ -75,6 +74,68 @@ public class Main {
         quickSortendTime = System.nanoTime();
         quickSortDuration = quickSortendTime - quickSortstartTime ;
         System.out.println("Quicksort Large Array Execution time: " + quickSortDuration / 1_000_000.0 + " ms");
+
+
+
+
+
+        //Jake section on insertion sort
+         System.out.println("\nJakes's insertion sort test");
+         long insertionSortStartTime = System.nanoTime();
+
+        //small
+        int[] jakeSmallArray = arrays.getSmallArray();
+         insertionSortStartTime = System.nanoTime();
+         InsertionSort.sort(jakeSmallArray, 20);
+         long insertionSortEndTime = System.nanoTime();
+         long insertionSortDuration = quickSortendTime - quickSortstartTime ;
+         System.out.println("Insertion Sort Small Array Execution time: " + quickSortDuration / 1_000_000.0 + " ms");
+
+        //medium
+        int[] jakeMediumArray = arrays.getMediumArray();
+        insertionSortStartTime = System.nanoTime();
+        InsertionSort.sort(jakeMediumArray, 100);
+        insertionSortEndTime = System.nanoTime();
+        insertionSortDuration = insertionSortEndTime - insertionSortStartTime;
+        System.out.println("Insertion Sort Medium Array Execution time: " + insertionSortDuration / 1_000_000.0 + " ms");
+
+        //large
+        int[] jakeLargeArray = arrays.getLargeArray();
+        insertionSortStartTime = System.nanoTime();
+        InsertionSort.sort(jakeLargeArray, 1000);
+        insertionSortEndTime = System.nanoTime();
+        insertionSortDuration = insertionSortEndTime - insertionSortStartTime;
+        System.out.println("Insertion Sort Large Array Execution time: " + insertionSortDuration / 1_000_000.0 + " ms");
+
+        //small nearly sorted
+        int[] jakeSmallArrayNS = arrays.getSmallNearlySorted();
+        insertionSortStartTime = System.nanoTime();
+        InsertionSort.sort(jakeSmallArrayNS, 20);
+        insertionSortEndTime = System.nanoTime();
+        insertionSortDuration = insertionSortEndTime - insertionSortStartTime;
+        System.out.println("Insertion Sort Small Near Sorted Array Execution time: " + insertionSortDuration / 1_000_000.0 + " ms");
+
+        //medium neraly sorted
+        int[] jakeMediumArrayNS = arrays.getMediumNearlySorted();
+        insertionSortStartTime = System.nanoTime();
+        InsertionSort.sort(jakeMediumArrayNS, 100);
+        insertionSortEndTime = System.nanoTime();
+        insertionSortDuration = insertionSortEndTime - insertionSortStartTime;
+        System.out.println("Insertion Sort Medium Near Sorted Array Execution time: " + insertionSortDuration / 1_000_000.0 + " ms");
+
+        //large nearly sorted
+        int[] jakeLargeArrayNS = arrays.getLargeNearlySorted();
+        insertionSortStartTime = System.nanoTime();
+        InsertionSort.sort(jakeLargeArrayNS, 1000);
+        insertionSortEndTime = System.nanoTime();
+        insertionSortDuration = insertionSortEndTime - insertionSortStartTime;
+        System.out.println("Insertion Sort Large Near Sorted Array Execution time: " + insertionSortDuration / 1_000_000.0 + " ms");
+
+
+
+
+
+
 
 
         //MJ's test to upload
